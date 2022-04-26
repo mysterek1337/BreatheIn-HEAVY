@@ -12,8 +12,6 @@ from tools.ipTools import GetTargetAddress, InternetConnectionCheck
 def GetMethodByName(method):
     if method == "SMS":
         dir = "tools.SMS.main"
-    elif method == "EMAIL":
-        dir = "tools.EMAIL.main"
     elif method in ("SYN", "UDP", "NTP", "POD", "ICMP", "MEMCACHED"):
         dir = f"tools.L4.{method.lower()}"
     elif method in ("HTTP", "SLOWLORIS"):
