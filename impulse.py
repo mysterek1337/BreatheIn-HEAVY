@@ -1,10 +1,7 @@
-# Created by LimerBoy
-# Import modules
 import os
 import sys
 import argparse
 
-# Go to current dir
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 try:
@@ -28,7 +25,7 @@ parser.add_argument(
 parser.add_argument(
     "--method",
     type=str,
-    metavar="<SMS/EMAIL/NTP/UDP/SYN/ICMP/POD/SLOWLORIS/MEMCACHED/HTTP>",
+    metavar="<UDP/SYN/ICMP/SLOWLORIS/MEMCACHED/HTTP>",
     help="Attack method",
 )
 parser.add_argument(
