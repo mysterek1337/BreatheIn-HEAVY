@@ -26,7 +26,7 @@ def flood(target):
         print(f"{Fore.RED}[!] {Fore.MAGENTA}ERR: TIMED OUT, FUCKED?!?!?!?!{Fore.RESET}")
     except Exception as e:
         print(
-            f"{Fore.MAGENTA}Error while sending GET request\n{Fore.MAGENTA}{e}{Fore.RESET}"
+            f"{Fore.MAGENTA}ERR while sending GET request\n{Fore.MAGENTA}{e}{Fore.RESET}"
         )
     else:
         print(
