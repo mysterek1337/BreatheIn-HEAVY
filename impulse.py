@@ -1,7 +1,10 @@
+# Created by LimerBoy
+# Import modules
 import os
 import sys
 import argparse
 
+# Go to current dir
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 try:
@@ -19,13 +22,13 @@ parser = argparse.ArgumentParser(description="Denial-of-service ToolKit")
 parser.add_argument(
     "--target",
     type=str,
-    metavar="<IP:PORT, URL>",
-    help="Target ip:port, url",
+    metavar="<IP:PORT, URL, PHONE>",
+    help="Target ip:port, url or phone",
 )
 parser.add_argument(
     "--method",
     type=str,
-    metavar="<UDP/SYN/ICMP/SLOWLORIS/MEMCACHED/HTTP/PROXY>",
+    metavar="<SMS/EMAIL/NTP/UDP/SYN/ICMP/POD/SLOWLORIS/MEMCACHED/HTTP>",
     help="Attack method",
 )
 parser.add_argument(
