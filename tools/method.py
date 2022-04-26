@@ -10,7 +10,7 @@ from tools.ipTools import GetTargetAddress, InternetConnectionCheck
 
 
 def GetMethodByName(method):
-    elif method in ("SYN", "UDP", "NTP", "POD", "ICMP", "MEMCACHED"):
+    if method in ("SYN", "UDP", "NTP", "POD", "ICMP", "MEMCACHED"):
         dir = f"tools.L4.{method.lower()}"
     elif method in ("HTTP", "SLOWLORIS"):
         dir = f"tools.L7.{method.lower()}"
