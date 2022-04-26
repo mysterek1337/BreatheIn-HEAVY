@@ -1,4 +1,3 @@
-# Import modules
 from hashlib import md5
 from string import ascii_letters
 
