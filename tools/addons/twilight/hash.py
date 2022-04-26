@@ -3,7 +3,6 @@ from hashlib import md5
 from string import ascii_letters
 
 
-# Get salt numbers
 def getSaltByKey(key, message):
     salt = ''
     kHash = md5(key.encode()).hexdigest()
