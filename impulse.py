@@ -19,8 +19,8 @@ parser = argparse.ArgumentParser(description="Denial-of-service ToolKit")
 parser.add_argument(
     "--target",
     type=str,
-    metavar="<IP:PORT, URL, PHONE>",
-    help="Target ip:port, url or phone",
+    metavar="<IP:PORT, URL>",
+    help="Target ip:port, url",
 )
 parser.add_argument(
     "--method",
