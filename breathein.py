@@ -1,5 +1,4 @@
-# Created by LimerBoy
-# Import modules
+# WARNING: THE CODE WAS WRITTEN BY LimerBoy, I ONLY CHANGED THE CODE!
 import os
 import sys
 import argparse
