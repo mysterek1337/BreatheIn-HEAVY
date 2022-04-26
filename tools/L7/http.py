@@ -23,7 +23,7 @@ def flood(target):
     try:
         r = requests.get(target, params=payload, headers=headers, timeout=4)
     except requests.exceptions.ConnectTimeout:
-        print(f"{Fore.RED}[!] {Fore.MAGENTA}Timed out{Fore.RESET}")
+        print(f"{Fore.RED}[!] {Fore.MAGENTA}ERR: TIMED OUT, FUCKED?!?!?!?!{Fore.RESET}")
     except Exception as e:
         print(
             f"{Fore.MAGENTA}Error while sending GET request\n{Fore.MAGENTA}{e}{Fore.RESET}"
