@@ -8,9 +8,6 @@ from tools.EMAIL.emailTools import ReadSenderEmail
 from time import sleep
 from colorama import Fore
 
-""" Check if site is under CloudFlare protection """
-
-
 def __isCloudFlare(link):
     parsed_uri = urlparse(link)
     domain = "{uri.netloc}".format(uri=parsed_uri)
@@ -28,9 +25,6 @@ def __isCloudFlare(link):
         return False
 
 
-""" Return ip, port """
-
-
 def __GetAddressInfo(target):
     try:
         ip = target.split(":")[0]
@@ -42,16 +36,10 @@ def __GetAddressInfo(target):
         return ip, port
 
 
-""" Return url (for HTTP method) """
-
-
 def __GetURLInfo(target):
     if not target.startswith("http"):
         target = f"http://{target}"
     return target
-
-
-""" Get target, subject, body """
 
 
 def __GetEmailMessage():
@@ -59,9 +47,6 @@ def __GetEmailMessage():
     subject = input(f"{Fore.BLUE}[?] {Fore.MAGENTA}Enter the Subject (leave blank for random value): ")
     body = input(f"{Fore.BLUE}[?] {Fore.MAGENTA}Enter Your Message (leave blank for random value): ")
     return [server, username, subject, body]
-
-""" Return target """
-
 
 def GetTargetAddress(target, method):
     if method == "SMS":
@@ -95,8 +80,6 @@ def GetTargetAddress(target, method):
     else:
         return target
 
-
-""" Is connected to internet """
 
 
 def InternetConnectionCheck():
